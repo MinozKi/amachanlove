@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>あまちゃんずスケジュール表メーカー</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" as="style">
+  <link rel="preload" href="./fonts/LINESeedJP_OTF_Bd.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/LINESeedJP_OTF_Rg.woff2" as="font" type="font/woff2" crossorigin>
+
+</head>
+<body>
+  <div id="wrap">
+    <div id="container">
+      <canvas id="scheduleCanvas" width="1280" height="1280"></canvas>
+      <canvas id="overlayCanvas" width="1280" height="1280"></canvas>
+    </div>
+
+    <div class="controls">
+      <label>基準日: <input type="date" id="baseDate"></label>
+    </div>
+
+    <div id="schedules"></div>
+    <div class="controls">
+      <label>MEMO <textarea id="remarksInput"></textarea></label>
+    </div>
+
+    <div class="controls">
+      <button onclick="downloadCanvas()">ダウンロード</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
